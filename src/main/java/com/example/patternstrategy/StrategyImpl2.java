@@ -1,4 +1,4 @@
-package org.example;
+package com.example.patternstrategy;
 
 public class StrategyImpl2 implements Strategy{
     @Override

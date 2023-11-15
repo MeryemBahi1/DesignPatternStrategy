@@ -1,4 +1,4 @@
-package org.example;
+package com.example.patternstrategy;
 
 public class Contexte {
     private Strategy strategy =new DefaultStrategyImpl();

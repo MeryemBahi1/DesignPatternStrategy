@@ -1,5 +1,4 @@
-package org.example;
-import java.lang.reflect.InvocationTargetException;
+package com.example.patternstrategy;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,12 +15,7 @@ public class Main {
             strategy = strategyMap.get(str);
             if (strategy == null) {
                 System.out.println("Création d'un nouvel objet de StrategyImpl" + str);
-                strategy = (Strategy) Class.forName("org.example.StrategyImpl" + str).getConstructor().newInstance();
-                strategyMap.put(str, strategy);
-            }
+                strategy = (Strategy) Class.forName("com.example.patternstrategy.StrategyImpl" + str).getConstructor().newInstance();
+                strategyMap.put(str, strategy);}
             contexte.setStrategy(strategy);
-            contexte.effectuerOperation();
-        }
-
-    }
-}
+            contexte.effectuerOperation();}}}
